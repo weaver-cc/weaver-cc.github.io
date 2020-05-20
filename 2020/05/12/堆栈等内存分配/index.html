@@ -415,19 +415,19 @@
 <p>全局变量：  静态区的常量区</p>
 <p>全局静态变量：静态区</p>
 <p>const变量：常量区</p>
-<pre><code>int a = 0;//全局初始化区
+<pre class=" language-language-c"><code class="language-language-c">int a = 0;//全局初始化区
 char *p1;//全局未初始化区
 const int aa = 1;//常量区 
 int main(void)
 {
 	int b;//栈
-	char s[] = &quot;abc&quot;;//栈
+	char s[] = "abc";//栈
 	char *p2;//栈
 	char *p3;//栈
 	static int c = 0;//全局（静态）初始化区
 	p1 = (char *)malloc(10);//p1还是在全局未初始化区，申请的10字节在堆区
 	p2 = (char *)malloc(20);//p2还是在栈，申请的20字节在堆区
-	strcpy(p1, &quot;123&quot;);//123在常量区，编译器可能会将它与p3所指向的&quot;123&quot;优化成一个地方
+	strcpy(p1, "123");//123在常量区，编译器可能会将它与p3所指向的"123"优化成一个地方
 }
 </code></pre>
 <hr>
@@ -467,12 +467,12 @@ char *s2 = &quot;bbbbbbbbbbbbbbbbb&quot;;
 而bbbbbbbbbbb是<strong>在编译时就确定</strong>的；<br>
 但是，在以后的存取中，在栈上的数组比指针所指向的字符串(例如堆)快。<br>
 比如：</p>
-<pre><code>#include 
+<pre class=" language-language-c"><code class="language-language-c">#include 
 void main() 
 { 
 	char a = 1; 
-	char c[] = &quot;1234567890&quot;; 
-	char *p =&quot;1234567890&quot;; 
+	char c[] = "1234567890"; 
+	char *p ="1234567890"; 
 	a = c[1]; 
 	a = p[1]; 
 	return; 
@@ -685,8 +685,8 @@ void main()
                     <div class="summary block-with-text">
                         
                             前言
-计算机中的都是以二进制存储的，根据冯 诺伊曼的静待你计算机体系结构框架，一台计算机由运算器，控制器，存储器，输入和输出设备组成。其中运算器，只有加法运算器，没有减法运算器（据说一开始是有的，后来由于减法器硬件开销太大，被废了）
-所以是
+计算机中的都是以二进制存储的，根据冯 诺伊曼的经典计算机体系结构框架，一台计算机由运算器，控制器，存储器，输入和输出设备组成。其中运算器，只有加法运算器，没有减法运算器（据说一开始是有的，后来由于减法器硬件开销太大，被废了）
+所以是没
                         
                     </div>
                     <div class="publish-info">
